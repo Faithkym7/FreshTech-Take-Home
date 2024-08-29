@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { AppBar, Avatar, Box, IconButton, Toolbar, Typography, styled, useTheme, Drawer as MuiDrawer, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import { ChevronLeft as ChevronLeftIcon, ChevronRight as ChevronRightIcon, Dashboard as DashboardIcon, Logout as LogoutIcon, Wifi as WifiIcon, LocalPhone as LocalPhoneIcon, Tv as TvIcon, Bolt as BoltIcon, Loop as LoopIcon, Receipt as ReceiptIcon, SupportAgent as SupportAgentIcon, NotificationsRounded as NotificationsRoundedIcon, KeyboardArrowRight as KeyboardArrowRightIcon } from '@mui/icons-material';
 import { shades } from 'theme';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import data from 'data/data.json';
 
-const drawerWidth = 240;
+const drawerWidth = '17rem';
 const logo = '/logo2.png';
 
 const openedMixin = (theme) => ({
@@ -73,6 +73,25 @@ const Appbar = () => {
     setOpen(!open);
   };
 
+  const location = useLocation();
+
+  let headerContent;
+  switch (location.pathname) {
+    case '/Dashboard':
+      headerContent = `Welcome, ${user.name}`;
+      break;
+    case '/Airtime-to-Cash':
+      headerContent = 'Airtime to Cash';
+      break;
+    case '/Transaction-History':
+      headerContent = 'Transaction History';
+      break;
+    case '/Help&Support':
+      headerContent = 'Help & Support';
+      break;
+    default:
+      headerContent = '';
+  }
   return (
     <Box display="flex">
       <AppBar position="fixed" sx={{ backgroundColor: shades.grey[100], color: 'black' }}>
@@ -176,7 +195,7 @@ const Appbar = () => {
             </List>
           </Drawer>
           <Box sx={{ flexGrow: 1 }}>
-            <Typography  sx={{fontWeight:'bold'}}>Welcome, {user.name}</Typography>
+            <Typography  sx={{fontWeight:'bold'}}>{headerContent}</Typography>
           </Box>
           <Box display="flex" alignItems="center">
             <Typography sx={{ marginRight: 2 , color: shades.blue[400], fontWeight:'bold'}}>Upgrade To Merchant</Typography>
