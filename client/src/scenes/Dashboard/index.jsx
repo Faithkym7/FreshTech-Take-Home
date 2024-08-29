@@ -1,14 +1,14 @@
-import React from 'react'
-import Wallet from './Wallet'
-import Profile from './Profile'
+import React from 'react';
+import Wallet from './Wallet';
+import Profile from './Profile';
 
 const Dashboard = () => {
   return (
     <>
-    <Wallet/>
-    <Profile/>
+      <Wallet sx={{mb: 5}} />
+      <Profile />
     </>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

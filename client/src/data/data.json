@@ -1,14 +1,15 @@
 {
     "user": {
       "name": "Lawal Wahab",
-      "email": "Lwahab@example.com",
+      "email": "wabdotmail@gmail.com",
       "role": "user",
+      "phone": "0906 856 2949",
       "profileImage": "/logo2.png", 
-      "walletBalance": 3000,
+      "walletBalance": 3000.00,
       "referralCode": "18/52ha089",
       "refferalLink": "www.subsum.com/tre/lawal",
       "accountStatus": "Active",
-      "refferals": 0,
+      "refferals": 0.00,
       "walletBonus":0.00,
       "notifications": [
         {
