@@ -1,8 +1,13 @@
 import React from 'react'
+import Wallet from './Wallet'
+import Profile from './Profile'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <>
+    <Wallet/>
+    <Profile/>
+    </>
   )
 }
 

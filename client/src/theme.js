@@ -2,7 +2,7 @@ import {createTheme} from '@mui/material/styles';
 
 export const shades = {
     
-    blue: {
+    indigo: {
           100: "#cccce6",
           200: "#9999cc",
           300: "#6666b3",
@@ -12,6 +12,17 @@ export const shades = {
           700: "#00004d",
           800: "#000033",
           900: "#00001a"
+    },
+    blue: {
+          100: "#d9e1f8",
+          200: "#b4c3f1",
+          300: "#8ea6e9",
+          400: "#6988e2",
+          500: "#436adb",
+          600: "#3655af",
+          700: "#284083",
+          800: "#1b2a58",
+          900: "#0d152c"
     },
     grey: {
           100: "#fcfdfe",

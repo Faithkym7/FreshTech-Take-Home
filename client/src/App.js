@@ -8,7 +8,6 @@ import Dashboard from "scenes/Dashboard";
 import Help from "scenes/Help";
 import Login from "scenes/Login";
 import Transaction from "scenes/Transaction";
-import User from "scenes/User";
 
 
 function App() {
@@ -27,8 +26,7 @@ const isErrorPage =
       <Route path="/Dashboard" element={<Dashboard/>}/>
       <Route path="/Airtime-to-Cash" element={<Airtime/>}/>
       <Route path="/Transaction-History" element={<Transaction/>}/>
-      <Route path="/Help&Support" element={<Help/>}/>
-      <Route path="/User-settings" element={<User/>}/>
+      <Route path="/Help&Support" element={<Help/>}/>      
       <Route path="/404" element={<Error404/>}/>
       <Route path="/504" element={<Error504/>}/>
     </Routes>

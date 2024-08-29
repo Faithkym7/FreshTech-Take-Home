@@ -1,0 +1,25 @@
+{
+    "user": {
+      "name": "Lawal Wahab",
+      "email": "Lwahab@example.com",
+      "role": "user",
+      "profileImage": "/logo2.png", 
+      "walletBalance": 3000,
+      "referralCode": "18/52ha089",
+      "refferalLink": "www.subsum.com/tre/lawal",
+      "accountStatus": "Active",
+      "refferals": 0,
+      "walletBonus":0.00,
+      "notifications": [
+        {
+          "id": 1,
+          "message": "Your subscription is expiring soon."
+        },
+        {
+          "id": 2,
+          "message": "New message from support."
+        }
+      ]
+    }
+  }
+  

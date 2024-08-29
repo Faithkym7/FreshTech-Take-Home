@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Appbar from './Appbar';
 
 const Header = () => {
   return (
-    <div>Header</div>
-  )
+    <>
+      <Appbar />
+    </>
+  );
 }
 
-export default Header
+export default Header;
