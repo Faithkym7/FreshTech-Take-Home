@@ -1,6 +1,4 @@
-Here’s an updated README for your project based on the instructions:
 
----
 
 # FreshTech Take-Home Project
 
@@ -73,6 +71,3 @@ If you have any further questions or need clarifications, feel free to ask.
 
 Thank you for considering my application. I look forward to the next steps.
 
----
-
-Feel free to adjust the sections as needed and include any additional details or instructions relevant to your project.
