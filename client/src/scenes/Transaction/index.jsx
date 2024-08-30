@@ -162,6 +162,8 @@ const Transaction = () => {
           lg: '5rem 12rem 0rem 20rem',
           xl: '5rem 15rem 0rem 20rem',
         },
+        width: '100%',
+        overflowX: 'auto'
       }}
     >
       <TextField
