@@ -51,7 +51,7 @@ To get started with the project locally, follow these steps:
 
 You can view the hosted version of the application at the following link:
 
-- [FreshTech Take-Home - Vercel]([https://freshtech-take-home.vercel.app](https://vercel.com/faith-kimanis-projects/fresh-tech-take-home/Afs2ctB9AhXj5otJJgPBFGYSwyTs))
+- [FreshTech Take-Home - Vercel](https://fresh-tech-take-home.vercel.app/)
 
 ## Task Instructions
 
