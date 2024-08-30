@@ -8,7 +8,13 @@ This repository contains the frontend implementation for the FreshTech take-home
 
 ## Screenshots
 
-*(Include screenshots or links to your application here if available)*
+- Log in page ![Log In Screen](client/public/screenshots/login-page.png)
+- Dashboard page 
+![Dasboard Screen](client/public/screenshots/dashboard-page1.png) 
+![Dashoard screen two](client/public/screenshots/dashboard-page2.png)
+- Airtime to Cash page ![Airtime to Cash Screen](client/public/screenshots/airtimen-page.png)
+- Transaction Page ![Transaction Screen](client/public/screenshots/transaction-page.png)
+- Help and Support Page ![Transaction Screen](client/public/screenshots/hepl-page.png)
 
 ## Installation
 
@@ -52,6 +58,7 @@ To get started with the project locally, follow these steps:
 You can view the hosted version of the application at the following link:
 
 - [FreshTech Take-Home - Vercel](https://fresh-tech-take-home.vercel.app/)
+- just click login since there's no authentication
 
 ## Task Instructions
 
