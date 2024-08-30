@@ -99,6 +99,7 @@ const Help = () => {
                 borderRadius: '30px',
               }}
             >
+              {/* TODO:change onhover to have the same settings */}
               <IconButton
                 sx={{
                   borderRadius: '30%',

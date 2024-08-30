@@ -241,6 +241,7 @@ const Appbar = () => {
             >
               <Avatar src={user.profileImage} alt={user.name} />
             </IconButton>
+            {/* TODO: change icon background color & reaign notification*/}
           </Box>
         </Toolbar>
       </AppBar>

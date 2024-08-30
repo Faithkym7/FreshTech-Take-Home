@@ -45,6 +45,7 @@ const Wallet = () => {
           >
             <Box display='flex' flexDirection='column' marginRight={isMediumScreen ? 0 : 2}>
               <Typography sx={{ color: shades.blue[700] }}>Wallet Balance</Typography>
+              {/* TODO: change currency format */}
               <Typography sx={{ color: shades.blue[700] }} fontWeight='bold' variant='h6'>
                 {amount.toFormat()}
               </Typography>
@@ -52,6 +53,7 @@ const Wallet = () => {
             <Button
               sx={{ backgroundColor: shades.blue[700], color: 'white', textTransform: 'capitalize', fontWeight: 'bold' }}
             >
+            
               Fund Wallet
             </Button>
           </Box>

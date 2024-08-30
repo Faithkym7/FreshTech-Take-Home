@@ -1,26 +1,287 @@
 {
-    "user": {
-      "name": "Lawal Wahab",
-      "email": "wabdotmail@gmail.com",
-      "role": "user",
-      "phone": "0906 856 2949",
-      "profileImage": "/logo2.png", 
-      "walletBalance": 3000.00,
-      "referralCode": "18/52ha089",
-      "refferalLink": "www.subsum.com/tre/lawal",
-      "accountStatus": "Active",
-      "refferals": 0.00,
-      "walletBonus":0.00,
-      "notifications": [
-        {
-          "id": 1,
-          "message": "Your subscription is expiring soon."
-        },
-        {
-          "id": 2,
-          "message": "New message from support."
-        }
-      ]
+  "user": {
+    "name": "Lawal Wahab",
+    "email": "wabdotmail@gmail.com",
+    "role": "user",
+    "phone": "0906 856 2949",
+    "profileImage": "/logo2.png",
+    "walletBalance": 3000.00,
+    "referralCode": "18/52ha089",
+    "refferalLink": "www.subsum.com/tre/lawal",
+    "accountStatus": "Active",
+    "refferals": 0.00,
+    "walletBonus": 0.00,
+    "notifications": [
+      {
+        "id": 1,
+        "message": "Your subscription is expiring soon."
+      },
+      {
+        "id": 2,
+        "message": "New message from support."
+      }
+    ]
+  },
+  "transactions": [
+    {
+      "id": 1,
+      "service": { 
+        "type": "Mtn Airtime VTU",
+        "Number": "09068562949"
+      },
+      "amount": 100.00,
+      "total_amount": 100.00,
+      "status": "Initiated",
+      "payment_method": "Transfer",
+      "transaction_no": "17045621860850336938179613",
+      "date": "6th January, 2024, 06:29PM"
+    },
+    {
+      "id": 2,
+      "service": {
+        "type": "Airtel DATA VTU",
+        "Number": "08023654781"
+      },
+      "amount": 500.00,
+      "total_amount": 500.00,
+      "status": "Successful",
+      "payment_method": "Card Payment",
+      "transaction_no": "17045621860850336938179614",
+      "date": "7th January, 2024, 10:15AM"
+    },
+    {
+      "id": 3,
+      "service": {
+        "type": "Startime",
+        "Number": "12547"
+      },
+      "amount": 1500.00,
+      "total_amount": 1500.00,
+      "status": "Failed",
+      "payment_method": "Wallet",
+      "transaction_no": "17045621860850336938179615",
+      "date": "7th January, 2024, 02:20PM"
+    },
+    {
+      "id": 4,
+      "service": {
+        "type": "DSTV",
+        "Number": "78512"
+      },
+      "amount": 2500.00,
+      "total_amount": 2500.00,
+      "status": "Successful",
+      "payment_method": "Transfer",
+      "transaction_no": "17045621860850336938179616",
+      "date": "8th January, 2024, 08:40AM"
+    },
+    {
+      "id": 5,
+      "service": {
+        "type": "Mtn Airtime VTU",
+        "Number": "09068562950"
+      },
+      "amount": 200.00,
+      "total_amount": 200.00,
+      "status": "Initiated",
+      "payment_method": "Card Payment",
+      "transaction_no": "17045621860850336938179617",
+      "date": "8th January, 2024, 09:15AM"
+    },
+    {
+      "id": 6,
+      "service": {
+        "type": "Airtel DATA VTU",
+        "Number": "08033659871"
+      },
+      "amount": 300.00,
+      "total_amount": 300.00,
+      "status": "Failed",
+      "payment_method": "Wallet",
+      "transaction_no": "17045621860850336938179618",
+      "date": "8th January, 2024, 11:50AM"
+    },
+    {
+      "id": 7,
+      "service": {
+        "type": "Startime",
+        "Number": "23598"
+      },
+      "amount": 1200.00,
+      "total_amount": 1200.00,
+      "status": "Successful",
+      "payment_method": "Transfer",
+      "transaction_no": "17045621860850336938179619",
+      "date": "8th January, 2024, 03:10PM"
+    },
+    {
+      "id": 8,
+      "service": {
+        "type": "DSTV",
+        "Number": "14752"
+      },
+      "amount": 2500.00,
+      "total_amount": 2500.00,
+      "status": "Initiated",
+      "payment_method": "Card Payment",
+      "transaction_no": "17045621860850336938179620",
+      "date": "9th January, 2024, 09:20AM"
+    },
+    {
+      "id": 9,
+      "service": {
+        "type": "Mtn Airtime VTU",
+        "Number": "09068562951"
+      },
+      "amount": 50.00,
+      "total_amount": 50.00,
+      "status": "Successful",
+      "payment_method": "Wallet",
+      "transaction_no": "17045621860850336938179621",
+      "date": "9th January, 2024, 11:00AM"
+    },
+    {
+      "id": 10,
+      "service": {
+        "type": "Airtel DATA VTU",
+        "Number": "08045679123"
+      },
+      "amount": 400.00,
+      "total_amount": 400.00,
+      "status": "Failed",
+      "payment_method": "Transfer",
+      "transaction_no": "17045621860850336938179622",
+      "date": "9th January, 2024, 01:45PM"
+    },
+    {
+      "id": 11,
+      "service": {
+        "type": "Startime",
+        "Number": "36958"
+      },
+      "amount": 1000.00,
+      "total_amount": 1000.00,
+      "status": "Successful",
+      "payment_method": "Card Payment",
+      "transaction_no": "17045621860850336938179623",
+      "date": "9th January, 2024, 03:30PM"
+    },
+    {
+      "id": 12,
+      "service": {
+        "type": "DSTV",
+        "Number": "96351"
+      },
+      "amount": 2000.00,
+      "total_amount": 2000.00,
+      "status": "Initiated",
+      "payment_method": "Wallet",
+      "transaction_no": "17045621860850336938179624",
+      "date": "10th January, 2024, 08:00AM"
+    },
+    {
+      "id": 13,
+      "service": {
+        "type": "Mtn Airtime VTU",
+        "Number": "09068562952"
+      },
+      "amount": 150.00,
+      "total_amount": 150.00,
+      "status": "Successful",
+      "payment_method": "Transfer",
+      "transaction_no": "17045621860850336938179625",
+      "date": "10th January, 2024, 09:30AM"
+    },
+    {
+      "id": 14,
+      "service": {
+        "type": "Airtel DATA VTU",
+        "Number": "08056873452"
+      },
+      "amount": 600.00,
+      "total_amount": 600.00,
+      "status": "Failed",
+      "payment_method": "Card Payment",
+      "transaction_no": "17045621860850336938179626",
+      "date": "10th January, 2024, 11:15AM"
+    },
+    {
+      "id": 15,
+      "service": {
+        "type": "Startime",
+        "Number": "78963"
+      },
+      "amount": 1300.00,
+      "total_amount": 1300.00,
+      "status": "Successful",
+      "payment_method": "Wallet",
+      "transaction_no": "17045621860850336938179627",
+      "date": "10th January, 2024, 01:40PM"
+    },
+    {
+      "id": 16,
+      "service": {
+        "type": "DSTV",
+        "Number": "78512"
+      },
+      "amount": 2200.00,
+      "total_amount": 2200.00,
+      "status": "Initiated",
+      "payment_method": "Transfer",
+      "transaction_no": "17045621860850336938179628",
+      "date": "11th January, 2024, 08:20AM"
+    },
+    {
+      "id": 17,
+      "service": {
+        "type": "Mtn Airtime VTU",
+        "Number": "09068562953"
+      },
+      "amount": 250.00,
+      "total_amount": 250.00,
+      "status": "Successful",
+      "payment_method": "Card Payment",
+      "transaction_no": "17045621860850336938179629",
+      "date": "11th January, 2024, 09:10AM"
+    },
+    {
+      "id": 18,
+      "service": {
+        "type": "Airtel DATA VTU",
+        "Number": "08067893412"
+      },
+      "amount": 700.00,
+      "total_amount": 700.00,
+      "status": "Failed",
+      "payment_method": "Wallet",
+      "transaction_no": "17045621860850336938179630",
+      "date": "11th January, 2024, 10:30AM"
+    },
+    {
+      "id": 19,
+      "service": {
+        "type": "Startime",
+        "Number": "98563"
+      },
+      "amount": 1400.00,
+      "total_amount": 1400.00,
+      "status": "Successful",
+      "payment_method": "Transfer",
+      "transaction_no": "17045621860850336938179631",
+      "date": "11th January, 2024, 11:55AM"
+    },
+    {
+      "id": 20,
+      "service": {
+        "type": "DSTV",
+        "Number": "87459"
+      },
+      "amount": 2300.00,
+      "total_amount": 2300.00,
+      "status": "Initiated",
+      "payment_method": "Card Payment",
+      "transaction_no": "17045621860850336938179632",
+      "date": "12th January, 2024, 09:05AM"
     }
-  }
-  
+  ]
+}
