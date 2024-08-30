@@ -11,9 +11,9 @@ import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 const Wallet = () => {
   const user = data.user;
   const amount = Dinero({ amount: user.walletBalance, currency: 'NGN' });
-  const cards = '/assets/cards.png'; // Fixed typo in file extension
+  const cards = '/assets/cards.png'; 
 
-  // Define media query for medium screens
+  
   const isMediumScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
   return (
@@ -34,7 +34,7 @@ const Wallet = () => {
           {/* Box 1 */}
           <Box
             display='flex'
-            flexDirection={isMediumScreen ? 'column' : 'row'} // Change layout based on screen size
+            flexDirection={isMediumScreen ? 'column' : 'row'}  
             alignItems='center'
             border={`1px solid ${shades.blue[200]}`}
             borderRadius='20px'

@@ -6,7 +6,7 @@ import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import QuestionMarkOutlinedIcon from '@mui/icons-material/QuestionMarkOutlined';
 import FilterListOutlinedIcon from '@mui/icons-material/FilterListOutlined';
 import data from 'data/data.json';
-import { shades } from 'theme';  // Assuming shades is correctly imported from your theme
+import { shades } from 'theme';  
 
 const Transaction = () => {
   const [filterText, setFilterText] = useState('');
@@ -34,7 +34,7 @@ const Transaction = () => {
       case 'Failed':
         return '#fa432a';
       default:
-        return 'black'; // Default color if status is something unexpected
+        return 'black'; 
     }
   };
 
@@ -47,8 +47,7 @@ const Transaction = () => {
       case 'Failed':
         return <IconButton sx ={{backgroundColor:'#fa432a', color:'white', height:'5px', width:'5px'}}><ErrorOutlineOutlinedIcon/></IconButton >;
       default:
-        return <IconButton sx ={{backgroundColor:'black', color:'white', height:'5px', width:'5px'}}><QuestionMarkOutlinedIcon/></IconButton >; // Default color if status is something unexpected
-    }
+        return <IconButton sx ={{backgroundColor:'black', color:'white', height:'5px', width:'5px'}}><QuestionMarkOutlinedIcon/></IconButton >; }
   };
 
   const columns = [

@@ -58,7 +58,7 @@ export const theme = createTheme({
         fontWeight: 400,
 
         h1: {
-            fontFamily: ["poppins", "serif"].join(","),
+            fontFamily: ['poppins'],
             fontSize: 48,
             fontWeight: 400,
             [`@media (min-width: 576px)`]: {
@@ -75,7 +75,7 @@ export const theme = createTheme({
             },
           },
           h2: {
-            fontFamily: ["poppins", "serif"].join(","),
+            fontFamily: ['poppins'],
             fontSize: 40,
             fontWeight: 400,
             [`@media (min-width: 576px)`]: {
@@ -92,7 +92,7 @@ export const theme = createTheme({
             },
           },
           h3: {
-            fontFamily: ["poppins", "serif"].join(","),
+            fontFamily: ['poppins'],
             fontSize: 32,
             fontWeight: 400,
             [`@media (min-width: 576px)`]: {
@@ -109,7 +109,7 @@ export const theme = createTheme({
             },
           },
           h4: {
-            fontFamily: ["poppins", "serif"].join(","),
+            fontFamily: ['poppins'],
             fontSize: 28,
             fontWeight: 400,
             [`@media (min-width: 576px)`]: {
@@ -126,7 +126,7 @@ export const theme = createTheme({
             },
           },
           h5: {
-            fontFamily: ["poppins", "serif"].join(","),
+            fontFamily: ['poppins'],
             fontSize: 24,
             fontWeight: 400,
             [`@media (min-width: 576px)`]: {
@@ -143,7 +143,7 @@ export const theme = createTheme({
             },
           },
           h6: {
-            fontFamily: ["poppins", "serif"].join(","),
+            fontFamily: ['poppins'],
             fontSize: 20,
             fontWeight: 400,
             [`@media (min-width: 576px)`]: {

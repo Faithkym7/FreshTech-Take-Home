@@ -1,9 +1,38 @@
 import React, { useState } from 'react';
-import { AppBar, Avatar, Box, IconButton, Toolbar, Typography, styled, useTheme, Drawer as MuiDrawer, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import { ChevronLeft as ChevronLeftIcon, ChevronRight as ChevronRightIcon, Dashboard as DashboardIcon, Logout as LogoutIcon, Wifi as WifiIcon, LocalPhone as LocalPhoneIcon, Tv as TvIcon, Bolt as BoltIcon, Loop as LoopIcon, Receipt as ReceiptIcon, SupportAgent as SupportAgentIcon, NotificationsRounded as NotificationsRoundedIcon, KeyboardArrowRight as KeyboardArrowRightIcon } from '@mui/icons-material';
+import {
+  AppBar,
+  Avatar,
+  Box,
+  IconButton,
+  Toolbar,
+  Typography,
+  styled,
+  useTheme,
+  Drawer as MuiDrawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText
+} from '@mui/material';
+import {
+  ChevronLeft as ChevronLeftIcon,
+  ChevronRight as ChevronRightIcon,
+  Dashboard as DashboardIcon,
+  Logout as LogoutIcon,
+  Wifi as WifiIcon,
+  LocalPhone as LocalPhoneIcon,
+  Tv as TvIcon,
+  Bolt as BoltIcon,
+  Loop as LoopIcon,
+  Receipt as ReceiptIcon,
+  SupportAgent as SupportAgentIcon,
+  NotificationsRounded as NotificationsRoundedIcon
+} from '@mui/icons-material';
 import { shades } from 'theme';
 import { Link, useLocation } from 'react-router-dom';
 import data from 'data/data.json';
+import ImageIconSlider from 'components/Airtime/ImageIconSlider';
 
 const drawerWidth = '17rem';
 const logo = '/logo2.png';
@@ -47,14 +76,14 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
       ...openedMixin(theme),
       '& .MuiDrawer-paper': {
         ...openedMixin(theme),
-        backgroundColor: shades.blue[100]
+        backgroundColor: shades.blue[100],
       },
     }),
     ...(!open && {
       ...closedMixin(theme),
       '& .MuiDrawer-paper': {
         ...closedMixin(theme),
-        backgroundColor: shades.blue[100]
+        backgroundColor: shades.blue[100],
       },
     }),
   }),
@@ -63,17 +92,24 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const Appbar = () => {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
-  const user = data.user;
   const [selectedIndex, setSelectedIndex] = useState(null);
+  const [isAirtimeToCashClicked, setIsAirtimeToCashClicked] = useState(false); 
 
-  const handleListItemClick = (index) => {
+  const user = data.user;
+  const location = useLocation();
+
+  const handleListItemClick = (index, path) => {
     setSelectedIndex(index);
+    if (path === "/Airtime-to-Cash") {
+      setIsAirtimeToCashClicked(true); 
+    } else {
+      setIsAirtimeToCashClicked(false); 
+    }
   };
+
   const toggleDrawer = () => {
     setOpen(!open);
   };
-
-  const location = useLocation();
 
   let headerContent;
   switch (location.pathname) {
@@ -92,87 +128,94 @@ const Appbar = () => {
     default:
       headerContent = '';
   }
+
   return (
     <Box display="flex">
       <AppBar position="fixed" sx={{ backgroundColor: shades.grey[100], color: 'black' }}>
-        <Toolbar sx={{ justifyContent: 'space-between' }}>          
-          <Drawer variant="permanent" open={open} >
+        <Toolbar sx={{ justifyContent: 'space-between' }}>
+          <Drawer variant="permanent" open={open}>
             <DrawerHeader>
               <Box display="flex" alignItems="center">
                 {open && (
                   <>
                     <img src={logo} alt="Company Logo" style={{ height: '40px', marginRight: '10px' }} />
-                    <Typography variant="h6" color={shades.blue[700]} fontWeight='bold'>subssum</Typography>
+                    <Typography variant="h6" color={shades.blue[700]} fontWeight="bold">
+                      subssum
+                    </Typography>
                   </>
                 )}
               </Box>
               <IconButton onClick={toggleDrawer}>
-              {open ? (
-                
-                <ChevronLeftIcon />
-              ) : (
-                <>
-                  <img
-                    src={logo}
-                    alt="Company Logo"
-                    style={{ height: '40px', marginRight: '10px' }}
-                  />
+                {open ? <ChevronLeftIcon /> : <>
+                  <img src={logo} alt="Company Logo" style={{ height: '40px', marginRight: '10px' }} />
                   <ChevronRightIcon />
-                </>
-                
-              )}
-            </IconButton>
-
-            </DrawerHeader>           
+                </>}
+              </IconButton>
+            </DrawerHeader>
             <List>
               {[
-                { text: 'Dashboard', icon: <DashboardIcon /> , path:"/Dashboard"},
-                { text: 'Buy Airtime', icon: <LocalPhoneIcon />, path:"/404" },
-                { text: 'Buy Data', icon: <WifiIcon /> , path:"/404"},
-                { text: 'TV Subscription', icon: <TvIcon /> , path:"/404"},
-                { text: 'Pay Electrical Bill', icon: <BoltIcon /> , path:"/404"},
-                { text: 'Airtime to Cash', icon: <LoopIcon />, path:"/Airtime-to-Cash" },
-                { text: 'Transaction History', icon: <ReceiptIcon /> , path:"/Transaction-History"},
-                { text: 'Help & Support', icon: <SupportAgentIcon /> , path:"/Help&Support" },                
+                { text: 'Dashboard', icon: <DashboardIcon />, path: "/Dashboard" },
+                { text: 'Buy Airtime', icon: <LocalPhoneIcon />, path: "/404" },
+                { text: 'Buy Data', icon: <WifiIcon />, path: "/404" },
+                { text: 'TV Subscription', icon: <TvIcon />, path: "/404" },
+                { text: 'Pay Electrical Bill', icon: <BoltIcon />, path: "/404" },
+                { text: 'Airtime to Cash', icon: location.pathname === '/Airtime-to-Cash' || isAirtimeToCashClicked ? <LogoutIcon /> : <LoopIcon />, path: "/Airtime-to-Cash" },
+                { text: 'Transaction History', icon: <ReceiptIcon />, path: "/Transaction-History" },
+                { text: 'Help & Support', icon: <SupportAgentIcon />, path: "/Help&Support" },
               ].map((item, index) => (
-                <ListItem key={item.text}  sx={{ display: 'block' }}>
-                  <ListItemButton
-                    component={Link}
-                    to = {item.path}
-                    sx={{
-                      minHeight: 48,
-                      justifyContent: open ? 'initial' : 'center',
-                      px: 2.5,
-                      backgroundColor: selectedIndex === index ? shades.blue[700] : 'transparent',
-                      borderRadius: selectedIndex === index? '5px' : '0',
-                      '&:hover': {
-                        backgroundColor: shades.blue[300],
-                        color: shades.grey[100],
-                      }
-                    }}
-                    onClick={() => handleListItemClick(index)}
-                  >
-                    <ListItemIcon
+                <React.Fragment key={item.text}>
+                  <ListItem sx={{ display: 'block' }}>
+                    <ListItemButton
+                      component={Link}
+                      to={item.path}
                       sx={{
-                        minWidth: 0,
-                        mr: open ? 3 : 'auto',
-                        justifyContent: 'center',
-                        color: selectedIndex === index ? 'white': shades.grey[800]
+                        minHeight: 48,
+                        justifyContent: open ? 'initial' : 'center',
+                        px: 2.5,
+                        backgroundColor: selectedIndex === index ? shades.blue[700] : 'transparent',
+                        borderRadius: selectedIndex === index ? '5px' : '0',
+                        '&:hover': {
+                          backgroundColor: shades.blue[300],
+                          color: shades.grey[100],
+                        }
                       }}
+                      onClick={() => handleListItemClick(index, item.path)}
                     >
-                      {item.icon}
-                    </ListItemIcon>
-                    <ListItemText primary={item.text} sx={{ opacity: open ? 1 : 0 , color: selectedIndex === index ? 'white': shades.grey[800]}} />
-                  </ListItemButton>
-                </ListItem>
+                      <ListItemIcon
+                        sx={{
+                          minWidth: 0,
+                          mr: open ? 3 : 'auto',
+                          justifyContent: 'center',
+                          color: selectedIndex === index ? 'white' : shades.grey[800],
+                        }}
+                      >
+                        {item.icon}
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={item.text}
+                        sx={{
+                          opacity: open ? 1 : 0,
+                          color: selectedIndex === index ? 'white' : shades.grey[800],
+                        }}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                  
+                  {item.text === 'Airtime to Cash' && isAirtimeToCashClicked && open && (
+                    <ListItem sx={{ display: 'block' }}>
+                      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                        <ImageIconSlider />
+                      </Box>
+                    </ListItem>
+                  )}
+                </React.Fragment>
               ))}
             </List>
-           
-            <List sx={{mt:10}}>
-              <ListItem  sx={{ display: 'block' }}>
+            <List sx={{ mt: 10 }}>
+              <ListItem sx={{ display: 'block' }}>
                 <ListItemButton
                   component={Link}
-                  to = "/"
+                  to="/"
                   sx={{
                     minHeight: 48,
                     justifyContent: open ? 'initial' : 'center',
@@ -184,29 +227,31 @@ const Appbar = () => {
                       minWidth: 0,
                       mr: open ? 3 : 'auto',
                       justifyContent: 'center',
-                      color: shades.grey[800]
+                      color: shades.grey[800],
                     }}
                   >
                     <LogoutIcon />
                   </ListItemIcon>
-                  <ListItemText primary="Logout" sx={{ opacity: open ? 1 : 0 , color: shades.grey[800] }} />
+                  <ListItemText primary="Logout" sx={{ opacity: open ? 1 : 0, color: shades.grey[800] }} />
                 </ListItemButton>
               </ListItem>
             </List>
           </Drawer>
           <Box sx={{ flexGrow: 1 }}>
-            <Typography  sx={{fontWeight:'bold'}}>{headerContent}</Typography>
+            <Typography sx={{ fontWeight: 'bold' }}>{headerContent}</Typography>
           </Box>
           <Box display="flex" alignItems="center">
-            <Typography sx={{ marginRight: 2 , color: shades.blue[400], fontWeight:'bold'}}>Upgrade To Merchant</Typography>
+            <Typography sx={{ marginRight: 2, color: shades.blue[400], fontWeight: 'bold' }}>
+              Upgrade To Merchant
+            </Typography>
             <IconButton
-              sx={{ 
-                borderRadius: '50%', 
-                border: `2px solid ${shades.blue[700]}` ,
-                width:40,
-                height: 40
+              sx={{
+                borderRadius: '50%',
+                border: `2px solid ${shades.blue[700]}`,
+                width: 40,
+                height: 40,
               }}
-             >
+            >
               <NotificationsRoundedIcon />
               {user.notifications.length > 0 && (
                 <Box
@@ -231,17 +276,16 @@ const Appbar = () => {
               )}
             </IconButton>
             <IconButton
-              sx={{ 
-                borderRadius: '50%', 
+              sx={{
+                borderRadius: '50%',
                 border: `2px solid ${shades.blue[700]}`,
                 ml: 1,
-                width:40,
-                height: 40
+                width: 40,
+                height: 40,
               }}
             >
               <Avatar src={user.profileImage} alt={user.name} />
             </IconButton>
-            {/* TODO: change icon background color & reaign notification*/}
           </Box>
         </Toolbar>
       </AppBar>

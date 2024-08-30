@@ -43,12 +43,12 @@ export const Error504 = () => {
         <Button
           variant="contained"
           sx={{
-            backgroundColor: shades.blue[700], // Use the sx prop for custom color
-            color: shades.grey[100],           // Ensure the text color is readable
+            backgroundColor: shades.blue[700], 
+            color: shades.grey[100],           
             padding: '0.5rem 2rem',
             textTransform: 'none',
             '&:hover': {
-              backgroundColor: shades.blue[500], // Darker shade on hover if needed
+              backgroundColor: shades.blue[500], 
             },
           }}
           href="/"

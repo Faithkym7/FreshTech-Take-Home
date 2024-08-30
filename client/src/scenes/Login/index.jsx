@@ -47,10 +47,10 @@ const Login = () => {
         flexDirection='column'
         alignItems='center'
         justifyContent='center'
-        width={isLargeScreen ? '60%' : '90%'} // Adjust width for responsiveness
+        width={isLargeScreen ? '60%' : '90%'} 
         m={isLargeScreen ? '0 3rem' : '0 1.5rem'} 
         borderRadius='5px'
-        p={3} // Padding for inner spacing
+        p={3} 
       >
         <Typography variant="h5" mb={2}>Login</Typography>
         <Button 
@@ -63,10 +63,10 @@ const Login = () => {
         </Button>
         <Divider sx={{ width: '80%', my: 2 }}>Or continue with</Divider>
         <Box
-          sx={{ width: '80%' }} // Width for the form container
-          backgroundColor={shades.grey[100]} // Background color for form container
+          sx={{ width: '80%' }} 
+          backgroundColor={shades.grey[100]} 
           borderRadius='5px'
-          p={2} // Padding for form container
+          p={2} 
         >
           <form style={{ width: '100%' }}>
             <Typography>Email Address</Typography>

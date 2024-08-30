@@ -101,7 +101,7 @@ const Profile = () => {
             variant="fullWidth"
             TabIndicatorProps={{
                 sx: {
-                display: 'none', // Hide the default indicator
+                display: 'none', 
                 },
             }}
             >
